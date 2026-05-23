@@ -1,6 +1,6 @@
 import 'package:bankapp/screens/homescreen.dart';
 import 'package:bankapp/screens/historyScreen.dart';
-import 'package:bankapp/screens/profileScreen.dart';
+import 'package:bankapp/screens/BillsScreen.dart';
 import 'package:bankapp/screens/trasnferscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +21,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     TransferScreen(),
     CardsScreen(),
     HistoryScreen(),
-    ProfileScreen(),
+    BillsScreen(),
   ];
 
   @override
@@ -44,7 +44,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.send), label: "Transfer"),
           BottomNavigationBarItem(icon: Icon(Icons.credit_card), label: "Cards",),
           BottomNavigationBarItem(icon: Icon(Icons.history), label: "History"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          BottomNavigationBarItem(icon: Icon(Icons.newspaper), label: "Bills"),
         ],
       ),
     );

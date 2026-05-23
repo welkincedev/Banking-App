@@ -165,7 +165,7 @@ class _TransferScreenState extends State<TransferScreen> {
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content: Text("Money sent successfully"),
+                            content: Text("\$$amount sent successfully"),
                             backgroundColor: Colors.green,
                           ),
                         );
@@ -187,7 +187,7 @@ class _TransferScreenState extends State<TransferScreen> {
             ),
             SizedBox(height: 20,),
             Container(
-              height: 150,
+              height: 150,alignment: Alignment.center,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [

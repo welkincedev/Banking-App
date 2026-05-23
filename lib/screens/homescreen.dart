@@ -107,15 +107,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               textAlign: TextAlign.left,
             ),
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                HomeChip(icon: "💸", title: "Send"),
-                HomeChip(icon: "📱", title: "Pay"),
-                HomeChip(icon: "💰", title: "Invest"),
-                HomeChip(icon: "🎁", title: "Reward"),
-              ],
+            SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.only(left: 30,right: 30,bottom: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  HomeChip(icon: "💸", title: "Send"),
+                  HomeChip(icon: "📱", title: "Pay"),
+                  HomeChip(icon: "💰", title: "Invest"),
+                  HomeChip(icon: "🎁", title: "Reward"),
+                ],
+              ),
             ),
             SizedBox(height: 10),
             Text(
@@ -126,16 +129,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               textAlign: TextAlign.left,
             ),
-            SizedBox(height: 15),
-            SizedBox(height: 300,
-              child: ListView.builder(
-                itemCount: transactions.length,
-                itemBuilder: (context, index) {
-                  final transaction = transactions[index];
-                  return TransactionTile(transaction: transaction);
-                },
-              ),
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: ListView.builder(shrinkWrap: true,
+                  itemCount: transactions.length,
+                  itemBuilder: (context, index) {
+                    final transaction = transactions[index];
+                    return TransactionTile(transaction: transaction);
+                  },
+                ),
             ),
+
           ],
         ),
       ),
